@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Paleta de cores */
+    --primary-light: #4C9AF5;
+    --primary-color: #2879D7;
+    --primary-dark: #0D5CB8;
+    --background: #E4F1FF;
+
+    --white: #FFFFFF;
+    --border-primary: #E6E6E6;
+    --text-secundary: #8E8E8E;
+    --black: #000000;
+
+    /* Paleta do Gradiente */
+    --back-light: #F0F7FF;
+    --back-dark: #A8C4E5;
+
+    /* Typografia / Fontes */
+    --font-inter: "Inter", Arial, sans-serif;
+    --small: 1.2rem;
+    --large: 2.2rem;
+    --Xlarge: 3rem;
+}
+
+body {
+    font-family: var(--font-inter);
+}
