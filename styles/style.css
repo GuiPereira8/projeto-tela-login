@@ -13,7 +13,7 @@
 
     --white: #FFFFFF;
     --border-primary: #E6E6E6;
-    --text-secundary: #8E8E8E;
+    --text-secundary: #637588;
     --black: #000000;
 
     /* Paleta do Gradiente */
@@ -28,5 +28,37 @@
 }
 
 body {
+    height: 100%;
     font-family: var(--font-inter);
+}
+
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+
+/* Começo do Estilo */
+main {
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+}
+
+.image-content {
+    position: relative;
+    background-color: var(--back-dark);
+    min-width: 50%;
+    height: 100dvh;
+    border-radius: 0 150px 150px 0;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-content .vetor {
+    position: absolute;
 }
