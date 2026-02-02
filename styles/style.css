@@ -61,4 +61,13 @@ main {
 
 .image-content .vetor {
     position: absolute;
+    width: 90%;
+}
+
+.image-content .img-blub {
+    z-index: 1;
+}
+
+.image-content .img-vetor {
+    z-index: 2;
 }
