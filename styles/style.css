@@ -22,7 +22,7 @@
 
     /* Typografia / Fontes */
     --font-inter: "Inter", Arial, sans-serif;
-    --small: 1.2rem;
+    --small: 1.1rem;
     --large: 2.2rem;
     --Xlarge: 3rem;
 }
@@ -35,13 +35,14 @@ body {
 a {
     text-decoration: none;
 }
+
 img {
     width: 100%;
 }
 
 /* Começo do Estilo */
 main {
-    max-width: 1920px;
+    /* max-width: 1920px; */
     margin: 0 auto;
     height: 100%;
     display: flex;
@@ -50,7 +51,7 @@ main {
 .image-content {
     position: relative;
     background-color: var(--back-dark);
-    min-width: 50%;
+    width: 50%;
     height: 100dvh;
     border-radius: 0 150px 150px 0;
     padding: 24px;
@@ -70,4 +71,193 @@ main {
 
 .image-content .img-vetor {
     z-index: 2;
+}
+
+/* Breaking point 1050px */
+/* Estilo da direita Formulário */
+.form-container {
+    width: 50%;
+    height: 100dvh;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+}
+
+.form-content {
+    width: 620px;
+    padding: 8px 12px;
+}
+
+.form-content .logo-text {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 0 8px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.form-content .logo-text>img {
+    width: 60px;
+}
+
+.form-content .logo-text>h2 {
+    font-size: var(--large);
+    font-weight: 600;
+}
+
+.form-content .headline {
+    width: 100%;
+    margin-bottom: 54px;
+}
+
+.form-content .headline>h1 {
+    font-size: var(--Xlarge);
+    margin-bottom: 14px;
+}
+
+.form-content .headline>p {
+    font-size: var(--small);
+    color: var(--text-secundary);
+}
+
+.form-content form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+form .input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 34px;
+}
+
+form .text-label {
+    font-size: var(--small);
+}
+
+form .input-wrapper .custom-input {
+    width: 100%;
+    padding: 10px;
+    height: 64px;
+    padding-right: 40px;
+    /* IMPORTANTE: Espaço extra na direita para o texto não ficar embaixo do ícone */
+    border: 1px solid var(--text-secundary);
+    border-radius: 12px;
+    font-size: 16px
+}
+
+form .remember-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 34px;
+    width: 100%;
+    font-size: var(--small);
+}
+
+form .remember-box input[type="checkbox"] {
+    scale: 1.5;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+form .remember-box>a {
+    color: var(--primary-color);
+}
+
+form .remember-box>a:hover {
+    color: var(--primary-dark);
+}
+
+form .remember-box>a:active {
+    color: var(--primary-light);
+}
+
+.input-icon {
+    position: absolute;
+    /* Flutua livremente */
+    right: 16px;
+    /* Cola na direita do pai */
+    top: 50%;
+    /* Empurra 50% para baixo */
+    transform: translateY(-50%);
+    /* Puxa 50% do próprio tamanho para cima (centralização vertical perfeita) */
+    pointer-events: none;
+    /* O clique passa através do ícone e foca no input */
+}
+
+form .submit-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 32px 0;
+}
+
+form .submit-box>p {
+    color: var(--text-secundary);
+    font-size: var(--small);
+}
+
+form .submit-box>p>a {
+    color: var(--primary-color);
+}
+
+form .submit-box>p>a:hover {
+    color: var(--primary-dark);
+}
+
+form .submit-box>p>a:active {
+    color: var(--primary-light);
+}
+
+.cta-button {
+    width: 100%;
+    padding: 20px 10px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--primary-color);
+    font-size: var(--small);
+    color: var(--white);
+    transition-duration: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Esilo do icone de olho no input */
+/* Botão invisível que segura os ícones */
+.toggle-password {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+input[type='password']::-ms-reveal {
+    display: none;
+}
+/* Fim do estilo do icone de olho */
+
+@media screen and (max-width: 1050px) {
+    .image-content {
+        display: none;
+    }
+    .form-container {
+        width: 100%;
+    }
 }
