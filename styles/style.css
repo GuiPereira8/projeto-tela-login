@@ -23,7 +23,7 @@
     /* Typografia / Fontes */
     --font-inter: "Inter", Arial, sans-serif;
     --small: 1.1rem;
-    --large: 2.2rem;
+    --large: 2rem;
     --Xlarge: 3rem;
 }
 
@@ -71,9 +71,9 @@ main {
 
 .image-content .img-vetor {
     z-index: 2;
+    width: 72%;
 }
 
-/* Breaking point 1050px */
 /* Estilo da direita Formulário */
 .form-container {
     width: 50%;
@@ -99,11 +99,11 @@ main {
     margin-bottom: 24px;
 }
 
-.form-content .logo-text>img {
+.form-content .logo-text > img {
     width: 60px;
 }
 
-.form-content .logo-text>h2 {
+.form-content .logo-text > h2 {
     font-size: var(--large);
     font-weight: 600;
 }
@@ -142,9 +142,9 @@ form .text-label {
 form .input-wrapper .custom-input {
     width: 100%;
     padding: 10px;
-    height: 64px;
-    padding-right: 40px;
-    /* IMPORTANTE: Espaço extra na direita para o texto não ficar embaixo do ícone */
+    height: 60px;
+    padding-right: 40px; /* IMPORTANTE: Espaço extra na direita para o texto não ficar embaixo do ícone */
+    padding-left: 16px;
     border: 1px solid var(--text-secundary);
     border-radius: 12px;
     font-size: 16px
@@ -179,15 +179,10 @@ form .remember-box>a:active {
 
 .input-icon {
     position: absolute;
-    /* Flutua livremente */
     right: 16px;
-    /* Cola na direita do pai */
-    top: 50%;
-    /* Empurra 50% para baixo */
-    transform: translateY(-50%);
-    /* Puxa 50% do próprio tamanho para cima (centralização vertical perfeita) */
-    pointer-events: none;
-    /* O clique passa através do ícone e foca no input */
+    top: 50%; /* Empurra 50% para baixo */
+    transform: translateY(-50%); /* Puxa 50% do próprio tamanho para cima (centralização vertical perfeita) */
+    pointer-events: none; /* O clique passa através do ícone e foca no input */
 }
 
 form .submit-box {
@@ -229,6 +224,8 @@ form .submit-box>p>a:active {
 .cta-button:hover {
     background-color: var(--primary-dark);
 }
+/* Fim do estilo da direita Formulário */
+
 
 /* Esilo do icone de olho no input */
 /* Botão invisível que segura os ícones */
@@ -253,11 +250,73 @@ input[type='password']::-ms-reveal {
 }
 /* Fim do estilo do icone de olho */
 
+
+/* Estilo para telas maiores */
+@media screen and (min-width: 1922px){
+    main {
+        max-width: 1920px;
+    }
+    .image-content {
+        border-radius: 150px;
+    }
+}
+
+
+/* Estilo para celulares */
 @media screen and (max-width: 1050px) {
     .image-content {
         display: none;
     }
+
     .form-container {
         width: 100%;
+    }
+
+    .form-content .logo-text {
+        margin-bottom: 18px;
+    }
+    
+    .form-content .logo-text > img {
+        width: 38px;
+    }
+
+    .form-content .logo-text > h2 {
+        font-size: 1.4rem;
+    }
+
+    .form-content .headline {
+        margin-bottom: 36px;
+    }
+
+    .form-content .headline > h1 {
+        font-size: var(--large);
+    }
+
+    .form-content .headline > p {
+        font-size: 16px;
+    }
+
+    form .input-wrapper {
+        margin-bottom: 28px;
+    }
+
+    form .text-label {
+        font-size: 16px;
+    }
+
+    form .remember-box input[type="checkbox"] {
+        scale: 1;
+        margin: 0;
+    }
+    form .remember-box  {
+        font-size: 1rem;
+        margin-bottom: 28px;
+    }
+
+    form .submit-box {
+        gap: 28px 0;
+    }
+    form .submit-box > p {
+        font-size: 16px;
     }
 }
