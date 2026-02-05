@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <title>Faça seu login</title>
 </head>
-
 <body>
     <main>
         <div class="image-content">
@@ -36,7 +32,7 @@
                 <form>
                     <label for="email" class="text-label">E-mail</label>
                     <div class="input-wrapper">
-                        <input type="email" id="email" class="custom-input" placeholder="seuemail@exemplo.com">
+                        <input type="email" id="email" class="custom-input" placeholder="seuemail@exemplo.com" required>
 
                         <!-- SVG do ícone aqui -->
                         <svg class="input-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -48,9 +44,9 @@
 
                     </div>
 
-                    <label for="email" class="text-label">Senha</label>
+                    <label for="senha" class="text-label">Senha</label>
                     <div class="input-wrapper">
-                        <input type="password" name="senha" id="senha" class="custom-input" placeholder="Sua senha">
+                        <input type="password" name="senha" id="senha" class="custom-input" placeholder="Sua senha" required minlength="8" maxlength="32">
 
                         <!-- SVG do ícone aqui -->
                         <button type="button" id="btn-toggle" class="toggle-password">
@@ -88,7 +84,7 @@
                     </div>
                     <div class="submit-box">
                         <input type="submit" value="Entrar" class="cta-button">
-                        <p>Ainda não tem uma conta? <a href="#">Cadastre-se</a></p>
+                        <p>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
                     </div>
                 </form>
             </div>
