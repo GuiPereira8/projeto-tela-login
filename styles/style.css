@@ -46,12 +46,12 @@ main {
     margin: 0 auto;
     height: 100%;
     display: flex;
+    background-image: linear-gradient(to top, var(--back-dark), var(--back-light));
 }
 
 .image-content {
     position: relative;
-    background-color: var(--back-dark);
-    width: 50%;
+    width: 55%;
     height: 100dvh;
     border-radius: 0 150px 150px 0;
     padding: 24px;
@@ -62,7 +62,7 @@ main {
 
 .image-content .vetor {
     position: absolute;
-    width: 90%;
+    width: 85%;
 }
 
 .image-content .img-blub {
@@ -76,13 +76,14 @@ main {
 
 /* Estilo da direita Formulário */
 .form-container {
-    width: 50%;
+    width: 45%;
     height: 100dvh;
     background-color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 12px;
+    box-shadow: 0px 4px 12px #00000020;
 }
 
 .form-content {
